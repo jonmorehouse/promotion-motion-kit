@@ -1,5 +1,6 @@
 class HomeScreen < PM::Screen
   title "Jim Carrey"
+  attr_reader :layout
 
   def on_load
     @layout = HomeLayout.new(root: self.view)

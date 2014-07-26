@@ -1,12 +1,29 @@
 class HomeLayout < MK::Layout
   view :movies_view
+  attr_reader :pi
 
   def layout
     root :home do
+      @pi = add UIButton, :profile_image_button
       add UIImageView, :profile_image
       add UILabel, :profession
       add movies_view, :movies_view
     end
+    @pi.on :touch do
+      puts "THIS WAS TOUCHED"
+    end
+  end
+
+  def profile_image_button_style
+    puts "HERE"
+    constraints do
+      left 100
+      width 50
+      top 100
+      height 50
+    end
+
+    background_color :orange.uicolor
   end
 
   def home_style
@@ -21,9 +38,9 @@ class HomeLayout < MK::Layout
     end
     constraints do
       left 20
-      top 84
-      width 100
-      height 100
+      top 42
+      width 50
+      height 50
     end
   end
 

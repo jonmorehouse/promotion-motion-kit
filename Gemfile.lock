@@ -24,4 +24,4 @@ DEPENDENCIES
   ProMotion!
   motion-kit (~> 0.10.1)
   rake
-  sugarcube (~> 1.6.1)
+  sugarcube
